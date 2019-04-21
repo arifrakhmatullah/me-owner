@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_editdata">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:id="@+id/relativeLayout">
+
+        <fragment
+            android:id="@+id/map_login"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/relativeLayout"
+    android:layout_marginTop="5dp">
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/takepicture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.33"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="takepicure"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
+
+
+                <ImageView
+                    android:id="@+id/gambar_takepicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/takepicture" />
+
+                <TextView
+                    android:id="@+id/tulisan_takepicture"
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:text="Ambil Gambar"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imageViewtakepicture"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayouttext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nama"
+            android:hint="Nama Usaha"
+            app:met_floatingLabel="highlight"
+            android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/labeljenisusaha"
+            android:text="Jenis Usaha"
+            android:layout_below="@+id/nama"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_tmb"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jenis_usaha_option"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/labeljenisusaha">
+        </TextView>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/alamat"
+            android:hint="Alamat Usaha"
+            app:met_floatingLabel="highlight"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/jenis_usaha_option"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jam_operasional"
+            android:hint="Jam Operasional"
+            app:met_floatingLabel="highlight"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/alamat"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/harga"
+            android:hint="Harga"
+            app:met_floatingLabel="highlight"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:layout_below="@+id/jam_operasional"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_hp"
+            android:hint="Nomor Handphone"
+            app:met_floatingLabel="highlight"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            app:met_maxCharacters="13"
+            android:layout_below="@+id/harga"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deskripsi"
+            android:hint="Deskripsi Tambahan Usaha"
+            app:met_floatingLabel="highlight"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/no_hp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lat"
+            android:text="Latitude"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/deskripsi"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lng"
+            android:text="Longitude"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/lat"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/datagambar"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/txt_id_pemilik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_pemilik"
+            android:layout_below="@+id/lng"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/txt_id_pemilik_bns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id_pemilik_bns"
+            android:layout_below="@+id/txt_id_pemilik"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/save"
+            android:layout_below="@+id/lng"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.33"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="takepicure"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
+
+
+                <ImageView
+                    android:id="@+id/gambar_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/save" />
+
+                <TextView
+                    android:id="@+id/tulisan_save"
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:text="Simpan"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/takelatlng"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="0.33"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="takepicure"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/save"
+            android:layout_toStartOf="@+id/save"
+            android:layout_marginRight="49dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground">
+
+
+                <ImageView
+                    android:id="@+id/gambar_takelatlng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/getlatitude" />
+
+                <TextView
+                    android:id="@+id/tulisantakelatlng"
+                    fontPath="fonts/Poppins-SemiBold.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:maxLines="1"
+                    android:text="Set Koordinat"
+                    android:textColor="@color/colorPrimary2"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>
+</RelativeLayout>

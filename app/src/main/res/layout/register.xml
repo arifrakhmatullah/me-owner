@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/logo_launcher" />
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Selamat Datang di ME-Owner"
+            android:textSize="18dip"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/View1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#448AFF" />
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dip"
+            android:text="Daftarkan Akun Anda Dengan Mengisi Form Dibawah Ini"
+            android:textAlignment="center"
+            android:textSize="16dip" />
+
+        <TextView
+            android:id="@+id/TextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:text="Masukan Foto Profil"
+            android:textAlignment="center"
+            android:textSize="16dip" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/takepicture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0.33"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="takepicure"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground">
+
+
+                    <ImageView
+                        android:id="@+id/gambar_takepicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/takepicture" />
+
+                    <TextView
+                        android:id="@+id/tulisan_takepicture"
+                        fontPath="fonts/Poppins-SemiBold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:maxLines="1"
+                        android:text="Ambil Gambar"
+                        android:textColor="@color/colorPrimary2"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        tools:ignore="MissingPrefix" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageViewtakepicture"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/nik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="No. Identitas"
+            android:inputType="phone"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/no_kk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="No. Kartu Keluarga"
+            android:inputType="phone"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Nama Lengkap"
+            android:inputType="textPersonName"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/tempat_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Tempat Lahir"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/tanggal_lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Tanggal Lahir"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:singleLine="true" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/jenis_kelamin"
+            android:entries="@+array/pilihjeniskelamin"
+            android:layout_marginTop="5dp">
+        </Spinner>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Alamat Sekarang"
+            android:inputType="textMultiLine"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Nama Pengguna"
+            app:met_floatingLabel="highlight"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Kata Sandi"
+            app:met_floatingLabel="highlight"
+            android:password="true"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:met_floatingLabel="highlight"
+            android:hint="Comfirmation Password"
+            android:password="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Email Aktif"
+            android:inputType="textEmailAddress"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/no_hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="No Handphone"
+            android:inputType="phone"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:hint="Kota Sekarang"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="#448AFF"
+            android:textColor="#fff"
+            android:text="Register"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:background="#00555555"
+            android:text="Login"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

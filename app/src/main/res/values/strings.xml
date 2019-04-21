@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Me-Owner</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="permission_dialog">Accessing Location Permissions required</string>
+    <string name="go_to_permissions_settings">Go to App settings and enable permissions</string>
+    <string name="action_settings">Settings</string>
+    <string name="seruan1">Terimakasih Telah Menggunakan Aplikasi Me-Owner</string>
+    <string name="cari">Cek Data Lokasi Usahamu Disini !</string>
+    <string name="seruan2">Kebocoran Ban, Kehabisan Bahan Bakar Me-Nambal Solusinya</string>
+    <string name="placeinformation">Informasi Lokasi</string>
+    <string name="deskripsi_detail_lokasi">Deskripsi</string>
+
+    <string-array name="pilihjeniskelamin">
+        <item>--Pilih--</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="pilihjenisusaha">
+        <item>--Pilih--</item>
+        <item>Tambal Ban</item>
+        <item>Bensin Eceran</item>
+    </string-array>
+</resources>
